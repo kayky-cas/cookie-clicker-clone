@@ -2,7 +2,21 @@
   "name": "cookie-clicker-clone",
   "version": "0.0.1",
   "description": "This is a clone from Cookie Clicker game.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "yarn sass && node .",
+    "dev": "yarn sass:watch | live-server src/public --port=3000",
+    "sass": "sass src/scss/style.scss src/public/assets/css/style.css",
+    "sass:watch": "sass src/scss/style.scss src/public/assets/css/style.css --watch"
+  },
   "repository": "http://github.com/kayky-cas/cookie-clicker-clone",
   "author": "Kayky Belleboni Casagrande",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "live-server": "^1.2.1"
+  },
+  "dependencies": {
+    "sass": "^1.39.2"
+  }
 }
